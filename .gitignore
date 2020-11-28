@@ -473,4 +473,4 @@ composer.lock
 *.scss.map
 
 .env
-/public/uploads
+public/uploads
