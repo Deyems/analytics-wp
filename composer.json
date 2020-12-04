@@ -1,0 +1,21 @@
+{
+    "name": "deyems/analytics",
+    "description": "wordpress analytics",
+    "authors": [
+        {
+            "name": "deyems",
+            "email": "adeyemisola11@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Methods\\": "Methods/"
+        },
+        "files":[
+            "core/config.php",
+            "core/routes.php"
+        ]
+    }
+}
