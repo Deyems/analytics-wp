@@ -1,13 +1,10 @@
 <?php
-
+/*
 // echo "Welcome to our Program!". date('Y-m-d H:i:s');
 // echo "<pre>";
 // var_dump($_SERVER);
 // echo "</pre>";
 
-// $uri = isset($_SERVER['PHP_SELF']) ? trim($_SERVER['PHP_SELF']) : '/';
-// $uri = isset($_SERVER['REQUEST_URI']) ? trim($_SERVER['REQUEST_URI']) : '/';
-// echo $uri;
 function getCleanURI(){
     $uri = isset($_SERVER['PHP_SELF']) ? trim($_SERVER['PHP_SELF']) : '/';
     // $uri = isset($_SERVER['REQUEST_URI']) ? trim($_SERVER['REQUEST_URI']) : '/';
@@ -17,18 +14,15 @@ function getCleanURI(){
 }
 
 function homePage(){
-    // echo "Welcome to home page";
     require_once "homepage.php";
 }
 
 function usersApi(){
     header('Content-type: application/json');
     echo json_encode(['status' => 'ok']);
-    // exit;
 }
 
 $uri = getCleanURI();
-// echo $uri;
 //ROUTING TO CREATE FRAMEWORK
 // switch ($uri) {
 //     case '':
@@ -65,7 +59,7 @@ class HomepageController{
 $obj = new HomepageController();
 call_user_func(['HomepageController','index'],'Hi');
 
-/*
+
 foreach($routes as $url => $handler){
     if($url === $uri){
         call_user_func($handler);
@@ -73,3 +67,19 @@ foreach($routes as $url => $handler){
     }
 }
 */
+
+/**
+ * Entry Point
+ */
+require_once '../vendor/autoload.php';
+// use App;
+// echo "Welcome<br />\n";
+
+// echo BASE_PATH;
+// echo "<br/>". PUBLIC_PATH;
+$app = new App\Application();
+$app->mount();
+// echo "\n";
+// Methods\Helpers::drive();
+// echo "\n";
+
