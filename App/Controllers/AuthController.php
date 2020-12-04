@@ -1,8 +1,11 @@
 <?php
 namespace App\Controllers;
 
-class AuthController{
+class AuthController extends BaseController{
     public function login(){
-        echo "Output from Login";
+        $this->loadView('login', [
+            'abah' => 'Me', 
+            'items' => ['app', 'bad', 'cat']
+        ]);
     }
 }
