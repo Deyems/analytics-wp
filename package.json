@@ -1,0 +1,28 @@
+{
+  "name": "static-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "gulp-babel": "^8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulpwatch": "gulp watch",
+    "gulpbuild": "gulp build",
+    "gulpscript": "gulp scripts"
+  },
+  "author": "john anisere",
+  "license": "ISC"
+}

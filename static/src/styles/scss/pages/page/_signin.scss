@@ -1,0 +1,86 @@
+.container--signin{
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    background-color: $lightpurple;
+}
+
+.signin--form-tile{
+    margin-bottom: 0;
+    color: $darkgrey;
+}
+
+.signin-subtitle{
+    margin-top: 0;
+    color: $secondary;
+    opacity: 0.5;
+}
+
+.my-form{
+    background-color: $white;
+    padding: 3rem;
+    padding-top: 2rem ;
+}
+
+.form-group{
+    margin-bottom: 0.2rem;
+}
+
+.form-group label{
+    display: inline-block;
+    margin-bottom: .5rem;
+    letter-spacing: 1.125px;
+    text-transform: uppercase;
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $darkgrey;
+    background: $lightpurple;
+    border: 1px solid $lightpurple;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-group small {
+    text-align: right;
+    display: block;
+    color: $secondary;
+    opacity: 0.5;
+    margin-top:0.2rem;
+}
+
+.sign-btn {
+    margin-top: 1rem;
+    width: 100% !important;
+    border-radius: 0.25rem !important;
+}
+.sign-up-text{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    opacity: 1;
+    text-align: center;
+    span{
+        opacity: 0.5;
+    }
+}
+
+.signin--logo{
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin: auto;
+    background-color: $primary;
+    span{
+        color:$white;
+    }
+}

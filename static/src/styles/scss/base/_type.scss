@@ -1,0 +1,187 @@
+/////////////////////////////////////////////////////////
+// Typography                                          //
+/////////////////////////////////////////////////////////
+
+// Type Defaults
+//// Base
+$hfont : Rubik, sans-serif !default;
+$bfont : $hfont !default;
+$line-height-base: 1.5!default;
+//// Mobile Sizes
+$fs-1-mobile: 32px!default;
+$fs-2-mobile: 28px!default;
+$fs-3-mobile: 24px!default;
+$fs-4-mobile: 20px!default;
+$fs-5-mobile: 18px!default;
+$fs-6-mobile: 16px!default;
+$fs-7-mobile: 16px!default;
+$fs-8-mobile: 14px!default;
+//// Desktop Sizes
+$fs-1-desktop: 50px!default;
+$fs-2-desktop: 36px!default;
+$fs-3-desktop: 28px!default;
+$fs-4-desktop: 24px!default;
+$fs-5-desktop: 20px!default;
+$fs-6-desktop: 18px!default;
+$fs-7-desktop: 16px!default;
+$fs-8-desktop: 14px!default;
+
+body {
+	// Awesome web fonts
+	-moz-font-feature-settings: 'liga', 'kern';
+	-moz-font-feature-settings: 'liga=1, kern=1';
+	-ms-font-feature-settings: 'liga', 'kern';
+	-o-font-feature-settings: 'liga', 'kern';
+	-webkit-font-feature-settings: 'liga', 'kern';
+	font-feature-settings: 'liga', 'kern';
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-stretch: normal;
+	// Defaults
+	font-size: 16px;
+    color: $bodycolor;
+    font-family: $bfont;
+}
+
+
+// Headings
+//// Defaults
+.heading {
+	font-family: $hfont;
+	font-weight: 300;
+	color: $headingcolor;
+	strong {font-weight: 400;}
+}
+.body {
+	font-family: $bfont;
+	font-weight: 300;
+	color: $bodycolor;
+}
+//// Mobile
+h1, .fs-1 {
+	@extend .heading;
+	font-size: $fs-1-mobile;
+	line-height: $fs-1-mobile * $line-height-base;
+}
+h2, .fs-2 {
+	@extend .heading;
+	font-size: $fs-2-mobile;
+	line-height: $fs-2-mobile * $line-height-base;
+}
+h3, .fs-3 {
+	@extend .heading;
+	font-size: $fs-3-mobile;
+	line-height: $fs-3-mobile * $line-height-base;
+}
+h4, .fs-4 {
+	@extend .heading;
+	font-size: $fs-4-mobile;
+	line-height: $fs-4-mobile * $line-height-base;
+}
+h5, .fs-5  {
+	@extend .heading;
+	font-size: $fs-5-mobile;
+	line-height: $fs-5-mobile * $line-height-base;
+}
+h6, p, .fs-6 {
+	@extend .body;
+	font-size: $fs-6-mobile;
+	line-height: $fs-6-mobile * $line-height-base;
+}
+label, input, .fs-7 {
+	@extend .heading;
+	font-size: $fs-7-mobile;
+	line-height: 30px;
+}
+small, .fs-8 {
+	@extend .body;
+	font-size: $fs-8-mobile;
+	line-height: $fs-8-mobile * $line-height-base;
+}
+//// Desktop
+@include media-breakpoint-up(md) {
+	h1, .fs-1 {
+		font-size: $fs-1-desktop;
+		line-height: $fs-1-desktop * $line-height-base;
+	}
+	h2, .fs-2 {
+		font-size: $fs-2-desktop;
+		line-height: $fs-2-desktop * $line-height-base;
+	}
+	h3, .fs-3 {
+		font-size: $fs-3-desktop;
+		line-height: $fs-3-desktop * $line-height-base;
+	}
+	h4, .fs-4 {
+		font-size: $fs-4-desktop;
+		line-height: $fs-4-desktop * $line-height-base;
+	}
+	h5, .fs-5  {
+		font-size: $fs-5-desktop;
+		line-height: $fs-5-desktop * $line-height-base;
+	}
+	h6, p, .fs-6 {
+		font-size: $fs-6-desktop;
+		line-height: 30px;
+	}
+	label, input, .fs-7 {
+		font-size: $fs-7-desktop;
+		line-height: 30px;
+	}
+	small, .fs-8 {
+		font-size: $fs-8-desktop;
+		line-height: $fs-8-desktop * $line-height-base;
+	}
+}
+
+a{
+	text-decoration: none;
+	color: $primary;
+}
+// Font weights
+.fw-300 {font-weight: 300;}
+.fw-400 {font-weight: 400;}
+.fw-600, strong, b {font-weight: 600;}
+.fw-800 {font-weight: 800;}
+
+
+// Text modifiers
+.text-lowercase {text-transform: lowercase !important;}
+.text-uppercase {text-transform: uppercase !important;}
+.text-capitalize {text-transform: capitalize !important;}
+.text-italic {font-style: italic;}
+.text-underline {text-decoration: underline;}
+
+
+// // Text Align
+// @each $breakpoint in map-keys($grid-breakpoints) {
+// 	@include media-breakpoint-up($breakpoint) {
+// 		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+// 		.text#{$infix}-left   { text-align: left !important; }
+// 		.text#{$infix}-right  { text-align: right !important; }
+// 		.text#{$infix}-center { text-align: center !important; }
+// 	}
+// }
+.text-justify  { text-align: justify !important; }
+.text-nowrap   { white-space: nowrap !important; }
+.text-truncate { @include text-truncate; }
+
+
+// Lists
+ul, ol {list-style: none;padding:0;}
+
+
+// Other helpers
+.text-hide {
+	@include text-hide();
+}
+
+
+// Breaks
+hr {
+	border:0;
+	border-bottom:1px solid $line;
+	height:1px;
+	background:none;
+}

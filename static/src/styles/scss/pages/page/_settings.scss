@@ -1,0 +1,146 @@
+
+.navbar-settings-form{
+    @extend .d-flex;
+    @extend .justify-content-between;
+}
+
+/* Style the tab */
+.tab {
+    width: 30%;
+    height: 300px;
+}
+
+.tab-inner{
+    padding: 10px;
+}
+
+.tab-options{
+    @extend .d-flex;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: rgba(64, 81, 105, 0.8);
+    font-size: 1rem;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+/* Change background color of buttons on hover */
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    color: #181426;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 2rem 0px;
+    width: 70%;
+    border-left: none;
+    border-radius: 10px;
+    background-color: $white;
+    height: 619px;
+}
+
+.tabcontent:first-child{
+    display: block;
+}
+
+.form-header{
+    border-bottom: 1px solid rgba(24, 20, 38, 0.15);
+    padding-bottom: 1.5rem;
+    p,h2{
+        margin: 0;
+    }
+}
+
+.form-header-content{
+    width: 90%;
+    margin: auto;
+}
+
+.form-content{
+    width: 90%;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.layer{
+    @extend .d-flex;
+    @extend .justify-content-between;
+    margin: 1rem 0;
+    > div{
+        flex: 1;
+        margin: 0;
+        margin-right: 2rem;
+    }
+    > div:last-child{
+        margin-right: 0;
+    }
+}
+
+.layer-last{
+    @extend .d-flex;
+    @extend .justify-content-end;
+    >div{
+        width: 25%;
+    }
+    button[type="button"]{
+        color: #262332;
+        background-color: $white;
+        border: 1px solid rgba(58, 46, 145, 0.2);
+        border-radius: 4px;
+    }
+    button[type="submit"]{
+        background: #4C60EB;
+        opacity: 0.3;
+        box-shadow: 0px 4px 14px rgba(24, 20, 38, 0.15);
+        border-radius: 4px;
+    }
+}
+
+/*Connect Website part*/
+/*Unique css on modal*/
+.web-btn{
+    margin: 2rem 0;
+    width: 100%;
+    border: 3px solid red;
+}
+
+.list-websites{
+    padding: 0 2rem;
+}
+
+/*List of Websites in a table*/
+
+.form-del{
+    text-align: right;
+}
+
+.del-btn{
+    background-color: transparent;
+    border: none;
+    color: #262332;
+}
+
+.token-wrapper{
+    background: $lightblue;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    padding: 0rem 1rem;
+    padding-right: 0.5rem;
+    border-radius: 5px;
+}
+
+.inp-grp button{
+    border-radius: 4px;
+}

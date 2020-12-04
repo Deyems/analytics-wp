@@ -1,0 +1,122 @@
+/////////////////////////////////////////////////////////
+// Button                                              //
+/////////////////////////////////////////////////////////
+
+// Button Defaults
+$btn-height: 50px !default;
+$btn-min-width: 10px !default;
+$btn-border-width: 1px !default;
+$btn-border-radius: 0px !default;
+$btn-font-family: $hfont !default;
+$btn-font-size: 16px !default;
+$btn-font-weight: 400 !default;
+$btn-text-transform: capitalize !default;
+$btn-transition: all 300ms linear !default;
+$btn-display: inline-block !default;
+
+$btn-max-height: $btn-height - ($btn-border-width * 2) !default;
+$btn-font-size: 16px !default;
+$btn-line-height: $btn-font-size + 4 !default;
+$btn-padding: (($btn-max-height / 2) - ($btn-line-height / 2))
+  ($btn-line-height * 1.2) !default;
+
+//// Base Button color
+$btn-font-color: white !default;
+$btn-bgcolor: $primary !default;
+
+$buttons: (
+  primary: (
+    $primary,
+    $white,
+    $primary,
+  ),
+  secondary: (
+    $secondary,
+    $white,
+    $secondary,
+  ),
+  black: (
+    $black,
+    $white,
+    $black,
+  ),
+  darkgrey: (
+    $darkgrey,
+    $white,
+    $darkgrey,
+  ),
+  lightpurple: (
+    $lightpurple,
+    $black,
+    $lightpurple,
+  ),
+  white: (
+    $white,
+    $primary,
+    $white,
+  ),
+  danger: (
+    $error,
+    $white,
+    $error,
+  ),
+  warning: (
+    $warning,
+    $white,
+    $warning,
+  ),
+  success: (
+    $success,
+    $white,
+    $success,
+  ),
+) !default;
+
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	@include transition($btn-transition);
+	@include border-radius($btn-border-radius);
+	display: $btn-display;
+	padding: $btn-padding;	
+	font-family: $btn-font-family;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
+	font-weight: $btn-font-weight;
+	text-transform: $btn-text-transform;
+	color: $btn-font-color;	
+	background-color: $btn-bgcolor;
+	background-clip: border-box;
+	border:$btn-border-width solid $btn-bgcolor;
+	min-width: $btn-min-width;
+	text-decoration: none;
+	text-align: center;	
+	width: auto;
+	appearance: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+.btn,
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  @each $name, $colors in $buttons {
+    $bgcolor: nth($colors, 1);
+    $fontcolor: nth($colors, 2);
+    $bordercolor: nth($colors, 3);
+    &.btn-#{$name} {
+      background-color: $bgcolor;
+      color: $fontcolor;
+      border-color: $bordercolor;
+      &.btn-outline {
+        background-color: transparent;
+        color: $bordercolor;
+      }
+    }
+  }
+}
