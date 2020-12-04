@@ -14,7 +14,7 @@ var paths = {
   },
   scripts: {
     src: 'static/src/scripts/**/*.js',
-    dest: 'public'
+    dest: 'public/js'
   }
 };
  
