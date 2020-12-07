@@ -1,10 +1,10 @@
-<?php require "partials/authheader.php" ?>
+<?php require_once "partials/authheader.php" ?>
     <body class="container--signin">
-        <form class="my-form" method="post" action="/auth/login">
+        <form class="my-form-signin" method="post" action="/auth/register">
             <div class="signin--logo">
-                <span>Logo</span>
+                <span>Logo </span>
             </div>
-
+            
             <h2 class="signin--form-tile"><?php echo $data['title']; ?></h2>
             <h6 class="signin-subtitle">Please enter your credentials to proceed.</h6>
             <div class="form-group">
@@ -14,12 +14,16 @@
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" />
+                <input type="password" name="password" class="form-control" >
             </div>
-            <input type="submit" value="Sign in" name="submit" class="btn btn-primary sign-btn" />
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="c_password" class="form-control" >
+            </div>
+            <input type="submit" value="Sign up" name="submit" class="btn btn-primary sign-btn">
             <span class="sign-up-text">
-                <span>Dont’ have an account? </span>
-                <a href="/auth/register">Sign up</a>
+                <span>Already have an account? </span>
+                <a href="/auth/login">Sign in</a>
             </span>
         </form>
     </body>
