@@ -3,6 +3,6 @@ namespace App\Controllers;
 
 class HomeController{
     public function index(){
-        echo "Welcome Home No place like it!";
+        require_once VIEW_PATH. 'dashboard.php';
     }
 }
