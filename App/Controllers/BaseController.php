@@ -20,7 +20,7 @@ abstract class BaseController{
     }
 
     public function redirect($to){
-        var_dump(header('Location: '. $to));
+        header('Location: '. $to);
         exit;
     }
 }
