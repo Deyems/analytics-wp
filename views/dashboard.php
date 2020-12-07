@@ -1,45 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="/css/scss/main.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="/scripts/dashboard.js" defer></script>
-</head>
-<body>
-    <div class="d-flex">
-        <div class="dashboard-sidebar">
-            <div class="menu">
-                <span class="logo-white">
-                    
-                </span>
-                <span class="menu-item active-one">
-                    <a class="" href="dashboard.html">
-                        <img src="/uploads/images/home.svg" alt="dashboard">
-                    </a>
-                </span>
-                <span class="menu-item">
-                    <a href="home.html">
-                        <img src="/uploads/images/people.svg" alt="author">
-                    </a>
-                </span>
-                <span class="menu-item">
-                    <a href="settings.html">
-                        <img src="/uploads/images/settings.svg" alt="settings">
-                    </a>
-                </span>
-            </div>
-            <div class="signout">
-                <span class="signout-item">
-                    <a href="/">
-                        <img class="signout-item-img" src="/uploads/images/arrowbar.svg" alt="arrow">
-                        <img class="signout-item-img" src="/uploads/images/arrowicon.svg" alt="bar">
-                    </a>
-                </span>
-            </div>
-        </div>
+<?php require_once 'partials/header.php' ?>
         <div class="dashboard--authors">
             <div class="searchbar">
                 <div>
@@ -656,6 +615,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </body>
 </html>

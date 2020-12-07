@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
+    <title><?php echo $data['title']; ?></title>
     <link rel="stylesheet" type="text/css" href="/css/scss/main.min.css" />
 </head>
     <body class="container--signin">
@@ -16,7 +16,7 @@
             <li><?php //echo $item; ?></li>
             <?php //endforeach; ?>
         </ul>
-        <h2 class="signin--form-tile">Sign in</h2>
+        <h2 class="signin--form-tile"><?php echo $data['title']; ?></h2>
         <h6 class="signin-subtitle">Please enter your credentials to proceed.</h6>
         <div class="form-group">
             <label>Email address</label>
