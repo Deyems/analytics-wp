@@ -72,11 +72,6 @@ class Router{
             return call_user_func_array(array(new $controller, $parts[1]),array());
     }
 
-   
-    // public static function get($path, $callback){
-    //     static::addRoute($path, $callback);
-    // }
-
     public static function addRoute($path, $callback, $method = 'get'){
         $found = false;
         
