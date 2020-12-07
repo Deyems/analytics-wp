@@ -1,8 +1,11 @@
 <?php
 namespace App\Controllers;
-
-class HomeController{
+/**
+ * @package App\Controllers;
+ */
+class HomeController extends BaseController{
     public function index(){
-        require_once VIEW_PATH. 'dashboard.php';
+
+        $this->loadView('dashboard', ['title' => 'Dashboard','script' => 'dashboard.js']);
     }
 }

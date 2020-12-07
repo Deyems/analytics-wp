@@ -6,7 +6,7 @@ class AuthController extends BaseController{
         if(isset($_GET['home'])){
             $this->redirect('/');
         }
-        $this->loadView('login');
+        $this->loadView('login', ['title' => 'Login']);
     }
 
     public function store(){
