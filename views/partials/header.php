@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $data['title']; ?></title>
+    <title><?php echo $title; ?></title>
     <link rel="stylesheet" type="text/css" href="css/scss/main.min.css" />
-    <script src="/scripts/<?php echo $data['script']; ?>" defer></script>
+    <script src="/scripts/<?php echo $script; ?>" defer></script>
 </head>
 <body>
 <div class="d-flex">
@@ -15,7 +15,7 @@
                 
             </span>
 
-            <?php if($data['title'] == 'Dashboard'): ?>
+            <?php if($title == 'Dashboard'): ?>
                 <span class="menu-item active-one">
                     <span>
                         <img src="uploads/images/home.svg" alt="dashboard">
@@ -29,7 +29,7 @@
                 </span>
             <?php endif; ?>
 
-            <?php if($data['title'] == 'Author Dashboard'): ?>
+            <?php if($title == 'Author Dashboard'): ?>
                 <span class="menu-item active-one">
                     <span>
                         <img src="uploads/images/people.svg" alt="author">
@@ -43,7 +43,7 @@
                 </span>
             <?php endif; ?>
 
-            <?php if($data['title'] == 'Settings Dashboard'): ?>
+            <?php if($title == 'Settings Dashboard'): ?>
                 <span class="menu-item active-one">
                     <span>
                         <img src="uploads/images/settings.svg" alt="settings">
