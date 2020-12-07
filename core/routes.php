@@ -15,5 +15,8 @@ Router::post('auth/register', 'AuthController@register');
 Router::get('settings', 'SettingsController@index');
 Router::post('settings', 'SettingsController@index');
 
+Router::get('post', 'SettingsController@post');
+Router::post('post', 'SettingsController@post');
+
 Router::get('author', 'AuthorController@index');
 Router::post('author', 'AuthorController@index');
