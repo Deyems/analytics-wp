@@ -6,7 +6,15 @@ class AuthController extends BaseController{
         if(isset($_GET['home'])){
             $this->redirect('/');
         }
-        $this->loadView('login', ['title' => 'Login']);
+        $this->loadView('login', ['title' => 'Sign in']);
+    }
+
+    public function register(){
+        $this->loadView('register', ['title' => 'Sign up']);
+    }
+    
+    public function forgot(){
+        $this->loadView('forgot', ['title' => 'Forgot Password']);
     }
 
     public function store(){
