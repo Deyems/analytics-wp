@@ -29,7 +29,7 @@
                 </span>
             <?php endif; ?>
 
-            <?php if($title == 'Author Dashboard'): ?>
+            <?php if($title == 'Author Dashboard' || $title == 'Post Dashboard'): ?>
                 <span class="menu-item active-one">
                     <span>
                         <img src="uploads/images/people.svg" alt="author">
@@ -60,7 +60,7 @@
         </div>
         <div class="signout">
             <span class="signout-item">
-                <a href="/">
+                <a href="/auth/logout">
                     <img class="signout-item-img" src="uploads/images/arrowbar.svg" alt="arrow">
                     <img class="signout-item-img" src="uploads/images/arrowicon.svg" alt="bar">
                 </a>
