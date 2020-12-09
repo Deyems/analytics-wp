@@ -5,12 +5,12 @@ use App\Router;
  */
 Router::get('/', 'HomeController@index');
 Router::get('auth/login', 'AuthController@login');
-Router::post('auth/login', 'AuthController@store');
+Router::post('auth/login', 'AuthController@processLogin');
 
-Router::post('auth/logout', 'AuthController@logout');
+Router::post('auth/logout', 'AuthController@login');
 
 Router::get('auth/register', 'AuthController@register');
-Router::post('auth/register', 'AuthController@register');
+Router::post('auth/register', 'AuthController@processReg');
 
 Router::get('settings', 'SettingsController@index');
 Router::post('settings', 'SettingsController@index');
