@@ -5,7 +5,5 @@
  * Entry Point
  */
 require_once '../vendor/autoload.php';
-
-$app = new App\Application();
-$app->mount();
-
+// die(DOT_ENV_FILE);
+(new App\Application());
