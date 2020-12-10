@@ -10,18 +10,9 @@ use App\Database\WhereClause;
 
 class Application{
     public function __construct(){
+        $this->loadSession();
         $this->loadConfig();
         $this->mount();
-
-        // DB::$user = env('DB_USER');
-        // DB::$password = env('DB_PASS');
-        // DB::$dbName = env('DB_NAME');
-        // DB::$host = env('DB_HOST'); //defaults to localhost if omitted
-
-        // // DB::$port = '4042'; // defaults to 3306 if omitted
-        // // DB::$encoding = 'utf8'; // defaults to latin1 if omitted
-        // var_dump(DB::get());
-        // DB::query("SELECT * FROM wpanalytics");
     }
 
     protected function mount(){
@@ -39,7 +30,7 @@ class Application{
     /**
      * Load .env file
      */
-    public function loadConfig(){
+    protected function loadConfig(){
         $this->checkConfig();
 
         $fh = fopen(DOT_ENV_FILE, "r");
@@ -51,9 +42,6 @@ class Application{
         }
         fclose($fh);
         $this->parseConfig($lines);
-        // echo "<pre>";
-        // print_r($lines);
-        // echo "</pre>";
     }
 
     protected function parseConfig(array $lines){
@@ -65,6 +53,10 @@ class Application{
             $value = trim(str_ireplace('"',"",$splitted[1]));
             $_ENV[$key] = $value;
         }
+    }
+
+    protected function loadSession(){
+        session_start();
     }
 
 }
