@@ -17,9 +17,16 @@ class User {
         return DB::insert(static::$table, $data);
     }
 
-    public static function findByEmail($email) {
+    public static function findByEmail($email) 
+    {
         $mysqli_result = DB::queryRaw('SELECT * FROM users WHERE email=%s', $email);
         return $mysqli_result->fetch_object();
+    }
+
+    public static function findAll()
+    {
+        $result = DB::query('SELECT * FROM '. static::$table);
+        return $result;
     }
 
     public static function updateLastLogin($id)
