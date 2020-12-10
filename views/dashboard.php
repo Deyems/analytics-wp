@@ -1,4 +1,5 @@
 <?php require_once 'partials/header.php' ?>
+
         <div class="dashboard--authors">
             <div class="searchbar">
                 <div>
@@ -11,6 +12,7 @@
                 </div>
             </div>
             <div class="table--container">
+            <?php require 'partials/flash-messages.php'; ?>
                 <div class="table--container--header">
                     <h2 class="table-title">
                         Dashboard
