@@ -33,3 +33,7 @@ function meekrodb_error_handler($params) {
       echo "<br>\n";
     }
   }
+
+  function getFlash($key){
+    return \App\Http\Session::getInstance()->getFlashData($key);
+  }
