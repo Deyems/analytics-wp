@@ -1,6 +1,7 @@
 <?php require_once "partials/authheader.php" ?>
     <body class="container--signin">
         <form class="my-form-signin" method="post" action="/auth/register">
+            <?php require "partials/flash-messages.php" ?>
             <div class="signin--logo">
                 <span>Logo </span>
             </div>
