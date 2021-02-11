@@ -25,7 +25,6 @@ class Session{
 
     public function setSessionData($key, $value){
         $this->segments->set($key, $value);
-        // return $this->segments->set($key, $value);
     }
 
     public function getSessionData($key){
@@ -34,7 +33,6 @@ class Session{
 
     public function setFlashData($key, $value){
         $this->segments->setFlash($key, $value);
-        // return $this->segments->set($key, $value);
     }
 
     public function getFlashData($key){
