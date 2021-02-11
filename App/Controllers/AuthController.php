@@ -12,9 +12,6 @@ use App\Validators\Validation;
 class AuthController extends BaseController
 {
 
-    // public function param($key) {
-    //     return isset($_GET[$key]) ? $_GET[$key] : '';
-    // }
     public function login() {
         $this->loadView('login', ['title' => 'Sign in']);
     }
@@ -55,13 +52,6 @@ class AuthController extends BaseController
     public function register()
     {
         $this->loadView('register', ['title' => 'Sign up']);
-        // echo "<br/>";
-        // foreach(User::findAll() as $row)
-        // {
-        //     echo "<pre>";
-        //         print_r($row);
-        //     echo "<pre/>";
-        // }
         
     }
 
@@ -84,16 +74,25 @@ class AuthController extends BaseController
             if(!Validation::isAnyFieldEmpty($data)){
                 // throw new \Exception('Your fields cannot be empty');
                 $this->session->setFlashData('error', 'Your fields cannot be empty');
+                return $this->redirect('/auth/register');
             };
 
             if(!$email){
                 // throw new \Exception('Email is not valid');
                 $this->session->setFlashData('error', 'Email is invalid');
+                return $this->redirect('/auth/register');
             }
 
             if(!Validation::checkPassword($password, $c_pass)){
                 // throw new \Exception('Passwords are not the SAME!');
                 $this->session->setFlashData('error', 'Passwords are not the SAME!');
+                return $this->redirect('/auth/register');
+            }
+
+            $old = User::findByEmail($email);
+            if($old){
+                $this->session->setFlashData('error', 'User already Exists');
+                return $this->redirect('/auth/register');
             }
 
             $result = User::create([
@@ -104,7 +103,7 @@ class AuthController extends BaseController
 
             if(!$result) {
                 $this->session->setFlashData('error', 'unable to create user account');
-                return $this->redirect('/auth/login');
+                return $this->redirect('/auth/register');
                 // return;
             }
             $this->session->setFlashData('success', 'Account created successfully');
@@ -123,6 +122,7 @@ class AuthController extends BaseController
 
     public function logout(){
         $this->session->delete();
-        $this->redirect('/auth/login?msg=logged-out');
+        $this->session->setFlashData('info', 'You are now logged out');
+        $this->redirect('/auth/login');
     }
 }
