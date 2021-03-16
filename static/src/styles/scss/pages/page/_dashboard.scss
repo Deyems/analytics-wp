@@ -1,0 +1,142 @@
+.graph-container{
+    display: grid;
+    grid-gap: 1.3rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+#myChart{
+    height: inherit;
+}
+
+.left-side-dash{
+    // border: 2px solid red;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+// .second-part-dash{
+//     // border: 1px solid purple;
+// }
+
+.author-share{
+    @extend .d-flex;
+    @extend .justify-content-between;
+    // border: 1px solid darkkhaki;
+    margin-bottom: 1rem;
+}
+
+.sh-auth-top-psts{
+    @extend .d-flex;
+    @extend .justify-content-between;
+}
+
+.top-authors{
+    // height: 40vh;
+    width: 55%;
+    padding: 1rem;
+    background-color: $white;
+}
+
+// .author-labels{
+//     @extend .d-flex;
+//     @extend .justify-content-between;
+// }
+
+.sharing-channel{
+    // height: 40vh;
+    width: 40%;
+    padding: 1rem;
+    background-color: $white;
+}
+
+.graph-asset{
+    width: 100%;
+}
+
+/*Shared Authors Section*/
+.shared-authors{
+    background: $white;
+    padding: 1rem;
+    width: 40%;
+}
+
+.top-post{
+    background: $white;
+    padding: 1rem;
+    width: 55%;
+}
+
+.authors{
+    background: $white;
+    padding: 2rem;
+}
+
+.authors-list{
+    @extend .d-flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+}
+
+.authors-list h3{
+    margin: 0;
+}
+
+[class^="load"] section{
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+    margin: 0.6rem 0;
+}
+
+[class^="load"] section>:first-child{
+    width: 10%;
+}
+
+[class^="load"] section:nth-of-type(even)>div:nth-of-type(even){
+    border-bottom: 1px solid $lightblue;
+    width: 84%;
+    padding-left: 2.1rem;
+    padding-bottom: 1rem;
+}
+
+.roader-details{
+    width: 85%;
+    // border: 1px solid purple;
+}
+
+.author-post-list img{
+    width: 26px;
+    height: 26px;
+}
+
+.author-post-list{
+    border-collapse: collapse;
+    // border: 1px solid maroon;
+    width: 100%;
+}
+
+.author-post-list-lower{
+    width: 96%;
+    margin: auto;
+    // border: 1px solid coral;
+}
+
+.author-row-list{
+    width: 100%;
+}
+
+.author-row-td{
+    padding: 0.2rem;
+}
+
+.author-row-td:nth-of-type(2){
+    padding-right: 1.4rem;
+}
+
+.author-email{
+    font-size: 12px;
+    margin-left: -20px;
+    letter-spacing: 0.03rem;
+}
+
+

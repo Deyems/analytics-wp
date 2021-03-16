@@ -1,0 +1,44 @@
+/////////////////////////////////////////////////////////
+// Color                                               //
+/////////////////////////////////////////////////////////
+
+// SETUP
+//// Base
+$primary: #4C60EB!default;
+$secondary: #405169!default;
+$black: #405169!default;
+$darkest: #000000;
+$darkgrey: #2E384D!default;
+$lightpurple: #F9FAFF!default;
+$white: #FFFFFF!default;
+$blue: #4c8eeb !default;
+$lightblue: rgb(221, 233, 251) !default;
+$lightgrey: #cccccc!default;
+
+
+//// States
+$error: #D0021B!default;
+$warning: #F5A623!default;
+$success: #7ED321!default;
+$disabled: $lightpurple!default;
+
+//// Defaults
+$bodycolor: $secondary!default;
+$headingcolor: $secondary!default;
+$line: #D8D8D8!default;
+
+$colors: (
+	primary: $primary,
+	secondary: $secondary,
+	black: $black,
+	darkgrey: $darkgrey,
+	lightpurple: $lightpurple,
+	blue: $blue,
+	white: $white,
+	error: $error,
+	warning: $warning,
+	success: $success,
+	disabled: $disabled,
+	lightblue: $lightblue,
+	lightgrey: $lightgrey,
+) !default;
